@@ -1,6 +1,7 @@
 package cr.automercado;
 
 import base.BasePage;
+import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -27,13 +28,17 @@ public class LoginTest extends BasePage {
 
     @Test
     public void endToEndTest() {
-        final String email = "maxter.rojas@gmail.com";
-        final String password = "Pa$$w0rd";
+        final String email = "isakart@gmail.com";
+        final String password = "Test123";
         Homepage home = new Homepage(driver);
+        boolean isPostLoginMenuPresent;
 
         home.getLoginButton().click();
         home.getLoginEmailInput().sendKeys(email);
         home.getLoginPasswordInput().sendKeys(password);
         home.getLoginButtonSubmit().click();
+        isPostLoginMenuPresent = home.getPostLoginDropdown().isDisplayed();
+
+        Assert.assertTrue(isPostLoginMenuPresent);
     }
 }

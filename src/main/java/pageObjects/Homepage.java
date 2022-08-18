@@ -16,6 +16,8 @@ public class Homepage {
 
     By loginPasswordInput = By.id("password");
 
+    By postLoginDropdown = By.id("dropdownManual");
+
     public Homepage(WebDriver driver) {
         this.driver = driver;
     }
@@ -38,5 +40,9 @@ public class Homepage {
 
     public WebElement getLoginButtonSubmit() {
         return driver.findElement(loginButtonSubmit);
+    }
+
+    public WebElement getPostLoginDropdown() {
+        return driver.findElement(postLoginDropdown);
     }
 }
