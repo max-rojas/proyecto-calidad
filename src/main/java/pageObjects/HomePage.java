@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class Homepage {
+public class HomePage {
 
     public WebDriver driver;
 
@@ -18,7 +18,9 @@ public class Homepage {
 
     By postLoginDropdown = By.id("dropdownManual");
 
-    public Homepage(WebDriver driver) {
+    By abarrotesOption = By.xpath("/html//am-main//am-home[@class='ng-star-inserted']/am-explore-products//section//drag-scroll/div[@class='drag-scroll-content']/div[1]/am-product-category//img[@alt='Abarrotes']");
+
+    public HomePage(WebDriver driver) {
         this.driver = driver;
     }
 
@@ -45,4 +47,10 @@ public class Homepage {
     public WebElement getPostLoginDropdown() {
         return driver.findElement(postLoginDropdown);
     }
+
+    public WebElement getabarrotesOption() {
+        return driver.findElement(abarrotesOption);
+    }
 }
+
+

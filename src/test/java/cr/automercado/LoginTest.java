@@ -5,7 +5,7 @@ import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import pageObjects.Homepage;
+import pageObjects.HomePage;
 
 import java.io.IOException;
 
@@ -26,11 +26,11 @@ public class LoginTest extends BasePage {
         driver = null;
     }
 
-    @Test
-    public void endToEndTest() {
+    @Test(groups = {"login_test"})
+    public void login_Test() {
         final String email = "isakart@gmail.com";
         final String password = "Test123";
-        Homepage home = new Homepage(driver);
+        HomePage home = new HomePage(driver);
         boolean isPostLoginMenuPresent;
 
         home.getLoginButton().click();
