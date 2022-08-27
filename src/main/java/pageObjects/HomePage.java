@@ -24,6 +24,28 @@ public class HomePage {
 
     By abarrotesOption = By.xpath("/html//am-main//am-home[@class='ng-star-inserted']/am-explore-products//section//drag-scroll/div[@class='drag-scroll-content']/div[1]/am-product-category//span[.='Abarrotes']");
 
+    By widgetMusic = By.xpath("/html//am-main/am-playlist//img[@src='/content/images/playlist.svg']");
+
+    By buttonPlay = By.cssSelector("body > am-main > am-playlist > div > div.music.p-3.active > div > div.row.no-gutters.actions.mx-3.flex-fill.ng-star-inserted > div:nth-child(2) > button > i");
+
+    By buttonRight = By.xpath("/html/body/am-main/am-playlist/div/div[2]/div/div[2]/div[3]/button/i");
+
+    By buttonLeft = By.cssSelector("body > am-main > am-playlist > div > div.music.p-3.active > div > div.row.no-gutters.actions.mx-3.flex-fill.ng-star-inserted > div:nth-child(1) > button > i");
+
+    /*-------*/
+    By botonCobertura = By.xpath("/html/body/am-main//am-navbar[@class='ng-star-inserted']/nav//ul[@class='navbar-nav row w-100']//p[@title='Ver cobertura y servicios']");
+
+    By botonVerCobCentro = By.xpath("/html/body/ngb-modal-window/div/div/am-modal-select-method/div/div[2]/div[2]/div/div[2]/am-method-card/div/div[3]/div[2]/am-button/button");
+
+    By botonVerCobDerecha = By.xpath("/html/body/ngb-modal-window/div/div/am-modal-select-method/div/div[2]/div[2]/div/div[3]/am-method-card/div/div[2]/div[2]/am-button/button");
+
+    By botonVerCobIzquierda = By.xpath("/html/body/ngb-modal-window/div/div/am-modal-select-method/div/div[2]/div[2]/div/div[1]/am-method-card/div/div[2]/div[2]/am-button/button");
+
+    By botonVolverCobCentro = By.xpath("/html/body/ngb-modal-window/div/div/am-modal-select-express/div/div[1]/div[1]/a");
+
+    By botonCerrarCobertura = By.className("close");
+
+    By recetasButton = By.xpath("//am-main//am-home[@class='ng-star-inserted']/am-home-menu/nav//ul[@class='navbar-nav']//a[@href='/recetas']");
     By inputSearchBar = By.xpath("/html/body/am-main/div[1]/am-navbar/nav/div[1]/div/ul/div[2]/li/am-product-search-navbar/form/span/input");
 
     By riceProduct = By.xpath("/html/body/am-main/div[2]/am-product-search/div/div/div/div[2]/div/div[2]/div/div[1]/am-product-list/div/div/div/div/div/div[3]/a/span");
@@ -96,6 +118,26 @@ public class HomePage {
     public WebElement getLandingModalCloseButton() {return driver.findElement(landingModalCloseButton); }
 
     public WebElement getHomeButton() {return driver.findElement(homeButton); }
+
+    public WebElement getWidgetMusic() {return driver.findElement(widgetMusic);}
+
+    public WebElement getButtonPlay() {return driver.findElement(buttonPlay);}
+
+    public WebElement getButtonRight() {return driver.findElement(buttonRight);}
+
+    public WebElement getButtonLeft() {return driver.findElement(buttonLeft);}
+    public WebElement getBotonCobertura() {return driver.findElement(botonCobertura);}
+
+    public WebElement getVerCoberturaCentro() { return driver.findElement(botonVerCobCentro);}
+
+    public WebElement getVerCoberturaDerecha() { return driver.findElement(botonVerCobDerecha);}
+
+    public WebElement getVerCoberturaIzquierda() { return driver.findElement(botonVerCobIzquierda);}
+    public WebElement getBotonVolverCobCentro() { return driver.findElement(botonVolverCobCentro);}
+
+    public WebElement getBotonCerrarCobertura() { return driver.findElement(botonCerrarCobertura);}
+
+    public WebElement getRecetasBoton() { return driver.findElement(recetasButton);}
 
     public WebElement getInputSearchBar() {return driver.findElement(inputSearchBar);}
 

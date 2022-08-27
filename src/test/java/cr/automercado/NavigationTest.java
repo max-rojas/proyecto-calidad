@@ -11,24 +11,19 @@ import pageObjects.NavigationPages;
 import java.io.IOException;
 
 public class NavigationTest extends BasePage {
-
-
     public NavigationTest() throws IOException {
         super();
     }
-
     @BeforeTest
     public void setup() throws IOException {
         driver = getDriver();
         driver.get(getUrl());
     }
-
     @AfterTest
     public void tearDown() {
         driver.close();
         driver = null;
     }
-
     @Test
     public void searchTest() {
         NavigationPages navigation = new NavigationPages(driver);
@@ -39,7 +34,5 @@ public class NavigationTest extends BasePage {
         navigation.getTrabajaConNostoros().click();
         navigation.getResponsabilidadSocial().click();
         navigation.getAyuda().click();
-
     }
-
 }
