@@ -2,6 +2,7 @@ package base;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -19,6 +20,8 @@ import java.util.concurrent.TimeUnit;
 
 public class BasePage {
     public static WebDriver driver;
+
+    public static JavascriptExecutor jse;
     private String url;
     private Properties prop;
 
@@ -28,6 +31,7 @@ public class BasePage {
         prop = new Properties();
         InputStream data = getClass().getClassLoader().getResourceAsStream(propFileName);
         prop.load(data);
+        jse = (JavascriptExecutor) driver;
     }
 
     public WebDriver getDriver() throws IOException {

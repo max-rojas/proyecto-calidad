@@ -24,6 +24,11 @@ public class HomePage {
 
     By abarrotesOption = By.xpath("/html//am-main//am-home[@class='ng-star-inserted']/am-explore-products//section//drag-scroll/div[@class='drag-scroll-content']/div[1]/am-product-category//span[.='Abarrotes']");
 
+    By loginError = By.xpath("/html/body/ngb-modal-window[@role='dialog']/div[@role='document']/div[@class='modal-content']/am-login-modal//form[@role='form']//div[@class='card-error mt-4']/div");
+
+    By emailInptuInvalidError = By.xpath("/html/body/ngb-modal-window/div/div/am-login-modal/div/div/div/div[2]/div[2]/div/form/div[1]/div/small");
+
+    By passwordInputInvalidError = By.xpath("/html/body/ngb-modal-window/div/div/am-login-modal/div/div/div/div[2]/div[2]/div/form/div[2]/div[2]/small");
     public HomePage(WebDriver driver) {
         this.driver = driver;
     }
@@ -59,6 +64,12 @@ public class HomePage {
     public WebElement getLandingModalCloseButton() {return driver.findElement(landingModalCloseButton); }
 
     public WebElement getHomeButton() {return driver.findElement(homeButton); }
+
+    public WebElement getLoginError() {return driver.findElement(loginError); }
+
+    public WebElement getEmailInptuInvalidError() {return driver.findElement(emailInptuInvalidError); }
+
+    public WebElement getPasswordInputInvalidError() {return driver.findElement(passwordInputInvalidError); }
 }
 
 
