@@ -12,7 +12,7 @@ public class BuscarPage {
 
     By productElement = By.xpath("/html/body/am-main//am-product-search[@class='ng-star-inserted']/div[@class='list ng-star-inserted']/div[@class='container']/div//div[@class='grid-square']/div[1]/am-product-list//div[@class='card card-product']//div[@class='d-flex flex-column']/div[2]");
 
-    By carrito = By.xpath("/html//am-main//am-navbar[@class='ng-star-inserted']/nav/div[@class='container-lg']/a[2]/am-shopping-cart//img[@src='../../../content/images/home/cart.svg']");
+    By carrito = By.xpath("/html/body/am-main/div[1]/am-navbar/nav/div[1]/a[2]");
 
     public BuscarPage(WebDriver driver) {
         this.driver = driver;

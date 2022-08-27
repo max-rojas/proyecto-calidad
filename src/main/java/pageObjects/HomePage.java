@@ -18,7 +18,11 @@ public class HomePage {
 
     By postLoginDropdown = By.id("dropdownManual");
 
-    By abarrotesOption = By.xpath("/html//am-main//am-home[@class='ng-star-inserted']/am-explore-products//section//drag-scroll/div[@class='drag-scroll-content']/div[1]/am-product-category//img[@alt='Abarrotes']");
+    By homeButton = By.xpath("/html/body/am-main/div[1]/am-navbar/nav/div[1]/a[1]");
+
+    By landingModalCloseButton = By.xpath("/html//div[@role='dialog']/div[@class='introjs-tooltip-header']/a[@role='button']");
+
+    By abarrotesOption = By.xpath("/html//am-main//am-home[@class='ng-star-inserted']/am-explore-products//section//drag-scroll/div[@class='drag-scroll-content']/div[1]/am-product-category//span[.='Abarrotes']");
 
     public HomePage(WebDriver driver) {
         this.driver = driver;
@@ -51,6 +55,10 @@ public class HomePage {
     public WebElement getabarrotesOption() {
         return driver.findElement(abarrotesOption);
     }
+
+    public WebElement getLandingModalCloseButton() {return driver.findElement(landingModalCloseButton); }
+
+    public WebElement getHomeButton() {return driver.findElement(homeButton); }
 }
 
 

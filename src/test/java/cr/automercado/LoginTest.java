@@ -26,7 +26,7 @@ public class LoginTest extends BasePage {
         driver = null;
     }
 
-    @Test(groups = {"login_test"})
+    @Test
     public void login_Test() {
         final String email = "isakart@gmail.com";
         final String password = "Test123";

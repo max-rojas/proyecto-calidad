@@ -10,9 +10,12 @@ public class MetodoDeEntregaModal {
 
     By opcionPickUp = By.xpath("/html/body/ngb-modal-window[@role='dialog']/div[@role='document']//am-modal-select-method/div[@class='modal-delivery-methods']//div[@class='container-fluid pt-2']/div[@class='row']/div[3]/am-method-card//am-button[@class='ng-star-inserted']/button[@type='button']");
 
-    By opcionPickUpRegular = By.xpath("/html/body/ngb-modal-window[@role='dialog']/div[@role='document']//am-modal-pickup/div/div[2]/div[1]/div[1]/div[@class='container-input-radio-1']/div[@class='input-radio-1']");
+//    By opcionPickUpRegular = By.xpath("/html/body/ngb-modal-window/div/div/am-modal-pickup/div/div[2]/div[1]/div[1]");
 
-    By botonGuardar = By.xpath("/html//ngb-modal-window[@role='dialog']/div[@role='document']//am-modal-pickup//am-button/button[@type='submit']");
+    By opcionPickUpRegular = By.xpath("/html/body/ngb-modal-window/div/div/am-modal-pickup/div/div[2]/div[1]/div[1]");
+    By botonGuardar = By.xpath("/html/body/ngb-modal-window/div/div/am-modal-pickup/div/div[2]/div[3]/am-button/button");
+
+    By botonVolver = By.xpath("/html//ngb-modal-window[@role='dialog']/div[@role='document']//am-modal-pickup//a[@href='javascript:;']/b[@class='green-text']");
 
     public MetodoDeEntregaModal(WebDriver driver) {
         this.driver = driver;
@@ -29,4 +32,6 @@ public class MetodoDeEntregaModal {
     public WebElement getBotonGuardar() {
         return driver.findElement(botonGuardar);
     }
+
+    public WebElement getBotonVolver() {return driver.findElement(botonVolver); }
 }
